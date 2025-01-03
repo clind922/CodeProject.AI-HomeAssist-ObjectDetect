@@ -363,7 +363,7 @@ class ObjectClassifyEntity(ImageProcessingEntity):
 
         try:
             predictions = self._cpai_object.detect(image)
-        except cpai.CodeProjectAIServerException as exc:
+        except cpai.CodeProjectAIException as exc:
             _LOGGER.error("CodeProject.AI Server error : %s", exc)
             return
 
